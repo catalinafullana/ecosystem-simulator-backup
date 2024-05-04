@@ -35,13 +35,24 @@ public class MainWindow extends JFrame {
 
         // crear la tabla de especies y añadirla a contentPanel.
         InfoTable speciesTable= new InfoTable("Species", new SpeciesTableModel(_ctrl));
-        speciesTable.setPreferredSize(new Dimension(500, 200));
+        speciesTable.setPreferredSize(new Dimension(500, 100));
         contentPanel.add(speciesTable);
 
         // crear la tabla de regiones.
         InfoTable regionsTable = new InfoTable("Regions", new RegionsTableModel(_ctrl));
         regionsTable.setPreferredSize(new Dimension(500, 250));
         contentPanel.add(regionsTable);
+
+        //tabla animales por energia
+        InfoTable energyTable = new InfoTable("Energy", new EnergyTableModel(_ctrl));
+        energyTable.setPreferredSize(new Dimension(500, 100));
+        contentPanel.add(energyTable);
+
+        //tabla animales por energia
+        InfoTable media_velocidades = new InfoTable("Velocity", new VelocityTableModel(_ctrl));
+        media_velocidades.setPreferredSize(new Dimension(500, 100));
+        contentPanel.add(media_velocidades);
+
 
         addWindowListener(new WindowListener() {
             @Override
